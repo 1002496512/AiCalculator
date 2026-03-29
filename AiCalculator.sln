@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37111.16 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiCalculator", "AiCalculator\AiCalculator.csproj", "{37752A1C-7500-43C6-B9FF-DFA7BA458253}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiClient", "AiClient\AiClient.csproj", "{552BCAC0-F0EA-4047-A9FC-76EE0431EE08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37752A1C-7500-43C6-B9FF-DFA7BA458253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37752A1C-7500-43C6-B9FF-DFA7BA458253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37752A1C-7500-43C6-B9FF-DFA7BA458253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37752A1C-7500-43C6-B9FF-DFA7BA458253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{552BCAC0-F0EA-4047-A9FC-76EE0431EE08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{552BCAC0-F0EA-4047-A9FC-76EE0431EE08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{552BCAC0-F0EA-4047-A9FC-76EE0431EE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{552BCAC0-F0EA-4047-A9FC-76EE0431EE08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60F133EB-1C5B-4A39-8E98-7C419E80D6E3}
+	EndGlobalSection
+EndGlobal

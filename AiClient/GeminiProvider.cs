@@ -1,7 +1,6 @@
 ﻿using AiClient;
 using GenerativeAI;
 using Google.GenAI;
-using Google.GenAI;
 using System;
 using System;
 using System.Collections.Generic;
@@ -42,7 +41,9 @@ namespace AI.Core
                     response.Candidates.Count > 0)
                 {
                     var firstCandidate = response.Candidates[0];
-                    if (firstCandidate.Content != null && firstCandidate.Content.Parts != null && firstCandidate.Content.Parts.Count > 0)
+                    if (firstCandidate.Content != null &&
+                        firstCandidate.Content.Parts != null &&
+                        firstCandidate.Content.Parts.Count > 0)
                     {
                         return firstCandidate.Content.Parts[0].Text;
                     }

@@ -123,5 +123,33 @@ namespace WpfChat
                 MessagesListBox.Items[MessagesListBox.Items.Count - 1] = "AI: (error) " + ex.Message;
             }
         }
+
+        // בתוך ה-Partial Class של ה-Form שלך
+        private List<ChatMessage> _chatHistory = new List<ChatMessage>();
+
+        private async void btnSend_Click(object sender, EventArgs e)
+        {
+            string userInput = InputTextBox.Text;
+            if (string.IsNullOrWhiteSpace(userInput)) return;
+
+            // 1. הוספת הודעת המשתמש להיסטוריה
+            ChatMessage userMessage = new ChatMessage(ChatRole.User, userInput);
+            _chatHistory.Add(userMessage);
+
+            // 2. עדכון ה-UI (הצגת ההודעה של המשתמש)
+            MessagesListBox.Items.Add("אתה: " + userInput + Environment.NewLine);
+            InputTextBox.Clear();
+
+            // 3. שליחת כל ההיסטוריה ל-Provider שנוצר ב-Factory
+            // הערה: ה-service נוצר מראש לפי המודל שנבחר ב-ComboBox
+            string aiResponse = await _chatService.GetResponseAsync(_chatHistory);
+
+            // 4. הוספת תשובת ה-AI להיסטוריה (חשוב מאוד! כדי שהוא יזכור מה הוא ענה)
+            ChatMessage aiMessage = new ChatMessage(ChatRole.Assistant, aiResponse);
+            _chatHistory.Add(aiMessage);
+
+            // 5. עדכון ה-UI (הצגת תשובת ה-AI)
+            MessagesListBox.Items.Add("AI: " + aiResponse + Environment.NewLine + Environment.NewLine);
+        }
     }
 }

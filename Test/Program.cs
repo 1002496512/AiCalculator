@@ -6,7 +6,7 @@ namespace Test
     {
         static async Task Main(string[] args)
         {
-            string apiKey = "AIzaSyCVCdynohJIxTAKs6P0zhAYHrbGGmZ2w9o";
+            string apiKey = "";
             GeminiMetadataService geminiMetadataService = new GeminiMetadataService(apiKey);
             await geminiMetadataService.LoadModelsAsync();
             List<string> models = geminiMetadataService.AvailableModels;
